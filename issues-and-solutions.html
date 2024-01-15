@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script>
+        function startDialog1() {
+            // Показываем диалоговое окно с вопросом
+            var response = confirm("Вы установили с удаленного сервера последние версии драйверов?");
+    
+            if (response) {
+                // Показываем второй вопрос
+                response = confirm("Микросхема совместима с стянутыми драйверами?");
+    
+                if (response) {
+                    alert("Обратитесь в поддержку.");
+                } else {
+                    // Предлагаем стянуть подходящие драйвера
+                    alert("Загрузите с удаленного сервера подходящие драйвера.");
+                    location.href = "issues-and-solutions.html"; // Переход на начальную страницу
+                }
+            } else {
+                // Предлагаем обновить драйвера
+                response = confirm("Обновите драйвера. Это помогло?");
+    
+                if (response) {
+                    location.href = "issues-and-solutions.html"; // Переход на начальную страницу
+                } else {
+                    // Показываем второй вопрос после обновления драйверов
+                    response = confirm("Микросхема совместима с стянутыми драйверами?");
+    
+                    if (response) {
+                        alert("Обратитесь в поддержку.");
+                    } else {
+                        // Предлагаем стянуть подходящие драйвера после обновления
+                        alert("Загрузите с удаленного сервера подходящие драйвера.");
+                        location.href = "issues-and-solutions.html"; // Переход на начальную страницу
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script>
+        function startDialog2() {
+            // Показываем диалоговое окно с вопросом
+            var response = confirm("У вас физически все правильно подключено?");
+
+            if (response) {
+                 // Если не помогло, предлагаем проверить последние версии драйверов
+                    response = confirm("У вас установлены последние версии драйверов?");
+
+                    if (response) {
+                        // Если да, обратитесь в поддержку и вернемся на начальную страницу
+                        alert("Обратитесь в поддержку.");
+                        location.href = "issues-and-solutions.html";
+                    } else {
+                        // Если нет, предлагаем загрузить последние версии драйверов
+                        response = confirm("Загрузите последние версии драйверов. Это помогло?");
+
+                        if (response) {
+                            // Вернемся на начальную страницу
+                            location.href = "issues-and-solutions.html";
+                        } else {
+                            // Если нет, обратитесь в поддержку и вернемся на начальную страницу
+                            alert("Обратитесь в поддержку.");
+                            location.href = "issues-and-solutions.html";
+                        }
+                    }
+            } else {
+                // Если подключение неправильное, проверяем стянуты ли последние версии драйверов
+                response = confirm("Проверьте правильность подключения к микросхемам. Это помогло?");
+
+                if (response) {
+                    // Если помогло, возвращаемся на начальную страницу
+                    location.href = "issues-and-solutions.html";
+                } else {
+                    // Если не помогло, предлагаем проверить последние версии драйверов
+                    response = confirm("У вас установлены последние версии драйверов?");
+
+                    if (response) {
+                        // Если да, обратитесь в поддержку и вернемся на начальную страницу
+                        alert("Обратитесь в поддержку.");
+                        location.href = "issues-and-solutions.html";
+                    } else {
+                        // Если нет, предлагаем загрузить последние версии драйверов
+                        response = confirm("Загрузите последние версии драйверов. Это помогло?");
+
+                        if (response) {
+                            // Если да, обратитесь в поддержку и вернемся на начальную страницу
+                            location.href = "issues-and-solutions.html";
+                        } else {
+                            // Если нет, обратитесь в поддержку и вернемся на начальную страницу
+                            alert("Обратитесь в поддержку.");
+                            location.href = "issues-and-solutions.html";
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script>
+    function startDialog3(){
+        // Показываем диалоговое окно с вопросом
+        var response1 = confirm("Установлены последние версии с удаленного сервера?");
+
+        if (response1) {
+            // Если установлены, проверяем совместимость драйверов
+            response2 = confirm("Драйвера совместимы?");
+
+            if (response2) {
+                // Если совместимы, проверяем целостность файлов
+                response3 = confirm("Файлы целы?");
+
+                if (response3) {
+                    // Если целы, обратитесь в поддержку и вернемся на начальную страницу
+                    alert("Обратитесь в поддержку.");
+                    location.href = "issues-and-solutions.html";
+                } else {
+                    // Если файлы не целы, предлагаем удалить и скачать заново
+                    alert("Удалите и скачайте заново.");
+                    location.href = "issues-and-solutions.html";
+                }
+            } else {
+                // Если драйвера не совместимы, обратитесь в поддержку
+                alert("Обратитесь в поддержку.");
+                location.href = "issues-and-solutions.html";
+            }
+        } else {
+            // Если не установлены, предлагаем обновить драйвер
+            response4 = confirm("Обновите драйвер. Это помогло?");
+
+            if (response4) {
+                // Если помогло, вернемся на начальную страницу
+                location.href = "issues-and-solutions.html";
+            } else {
+                // Если не помогло, проверяем совместимость драйверов после обновления
+                response5 = confirm("Драйвера совместимы?");
+
+                if (response5) {
+                    // Если совместимы, проверяем целостность файлов
+                    response6 = confirm("Файлы целы?");
+
+                    if (response6) {
+                        // Если целы, обратитесь в поддержку и вернемся на начальную страницу
+                        alert("Обратитесь в поддержку.");
+                        location.href = "issues-and-solutions.html";
+                    } else {
+                        // Если файлы не целы, предлагаем удалить и скачать заново после обновления
+                        alert("Удалите и скачайте заново.");
+                        location.href = "issues-and-solutions.html";
+                    }
+                } else {
+                    // Если драйвера не совместимы после обновления, обратитесь в поддержку
+                    alert("Обратитесь в поддержку.");
+                    location.href = "issues-and-solutions.html";
+                }
+            }
+        }
+    };
+    </script>
+        
+    <script>
+        function startDialog4() {
+            var response1 = confirm("Установлены последние версии драйверов с удаленного сервера?");
+            
+            if (response1) {
+                var response2 = confirm("Драйвера совместимы?");
+                
+                if (response2) {
+                    var response3 = confirm("Файлы целы?");
+                    
+                    if (response3) {
+                        alert("Обратитесь в поддержку.");
+                        location.href = "issues-and-solutions.html";
+                    } else {
+                        alert("Удалите и скачайте заново.");
+                        location.href = "issues-and-solutions.html";
+                    }
+                } else {
+                    alert("Обратитесь в поддержку.");
+                    location.href = "issues-and-solutions.html";
+                }
+            } else {
+                var response4 = confirm("Обновите драйвер. Это помогло?");
+                
+                if (response4) {
+                    location.href = "issues-and-solutions.html";
+                } else {
+                    var response5 = confirm("Драйвера совместимы после обновления?");
+                    
+                    if (response5) {
+                        var response6 = confirm("Файлы целы?");
+                        
+                        if (response6) {
+                            alert("Обратитесь в поддержку.");
+                            location.href = "issues-and-solutions.html";
+                        } else {
+                            alert("Удалите и скачайте заново после обновления.");
+                            location.href = "issues-and-solutions.html";
+                        }
+                    } else {
+                        alert("Обратитесь в поддержку.");
+                        location.href = "issues-and-solutions.html";
+                    }
+                }
+            }
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <style>
+        .logo-img {
+            width: 40%; /* Примерная ширина, можно настроить под свои нужды */
+            height: auto;
+            margin-top: 10px;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            background: #edf2f7;
+        }
+
+        .header, .footer {
+            background: #00a7b5;
+            color: #fff;
+        }
+
+        .header h1, .footer p {
+            margin: 0;
+        }
+
+        .header {
+            padding: 16px 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: #00a7b5;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav a {
+            text-decoration: none;
+            padding: 10px 15px;
+            color: #ebf4ff;
+            border: 1px solid transparent;
+        }
+
+        .nav a:not(:last-child) {
+            border-right: 1px solid #007aff;
+        }
+
+        .nav a:hover {
+            background-color: #008692;
+            color: #fff;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Минимальная высота всей страницы */
+    }
+
+    .content {
+        flex: 1;
+        padding: 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .footer {
+        margin-top: auto; /* Футер будет располагаться внизу страницы */
+    }
+        .footer {
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div align="center" class="header">
+    <h1>Техническая поддержка</h1>
+</div>
+
+<div class="nav">
+    <a href="description.html">Описание тестов</a>
+    <a href="tested-functions.html">Тестируемые функции</a>
+    <a href="testing-functions.html">Описание работы тестов</a>
+    <a href="required-modules.html">Требуемые модули</a>
+    <a href="maintenance.html">Регламентные работы</a>
+    <a href="issues-and-solutions.html">Неисправности</a>
+    <a href="contacts.html">Контакты</a>
+</div>
+<H2 align="center">Нажмите на наименование, интересующей вас неисправности, чтобы начать диалог</H2>
+<div style="display: flex; justify-content: center; width: 100%;">
+    <table style="border-collapse: collapse; width: 100%; max-width: 1000px;">
+        <thead style="background-color: #f2f2f2;">
+            <tr>
+                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Наименование неисправности</th>
+                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="testHangs" style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Тесты зависают</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">При запуске тестов некоторые из них зависают</td>
+            </tr>
+            <tr>
+                <td id="testHangs2" style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Ошибка отправки данных по каналу</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">При запуске теста данные не отправляются по шине</td>
+            </tr>
+            <tr>
+                <td id="testHangs3" style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Нестабильность тестов</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">При запуске тестов, тесты работают через раз</td>
+            </tr>
+            <tr>
+                <td id="testHangs4" style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Ошибка совместимости драйверов</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Драйвера не совместимы</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <h2>Ссылка для скачивания файла со схемой действий для каждой неисправности</h2>
+    <a href="load/4 неисправностей объекта схемы.vsdx" download>Скачать файл</a>
+</div>
+
+<div class="footer">
+    <p>&copy; Отдел тестирования 2024</p>
+</div>
+
+<script>
+    document.getElementById("testHangs").onclick = function() {
+        startDialog1();
+    };
+</script>
+<script>
+    document.getElementById("testHangs2").onclick = function() {
+        startDialog2();
+    };
+</script>
+<script>
+    document.getElementById("testHangs3").onclick = function() {
+        startDialog3();
+    }
+    document.getElementById("testHangs4").onclick = function() {
+        startDialog4();
+    };
+</script>
+
+</body>
+</html>

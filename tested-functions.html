@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <style>
+        .logo-img {
+            width: 40%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            background: #edf2f7;
+            min-height: 100vh;
+        }
+
+        .header, .footer {
+            background: #00a7b5;
+            color: #fff;
+        }
+
+        .header h1, .footer p {
+            margin: 0;
+        }
+
+        .header {
+            padding: 16px 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: #00a7b5;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav a {
+            text-decoration: none;
+            padding: 10px 15px;
+            color: #ebf4ff;
+            border: 1px solid transparent;
+        }
+
+        .nav a:not(:last-child) {
+            border-right: 1px solid #007aff;
+        }
+
+        .nav a:hover {
+            background-color: #008692;
+            color: #fff;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .footer {
+            padding: 10px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+<div align="center" class="header">
+    <h1>Тестируемые функции</h1>
+</div>
+
+<div class="nav">
+    <a href="description.html">Описание тестов</a>
+    <a href="tested-functions.html">Тестируемые функции</a>
+    <a href="testing-functions.html">Описание работы тестов</a>
+    <a href="required-modules.html">Требуемые модули</a>
+    <a href="maintenance.html">Регламентные работы</a>
+    <a href="issues-and-solutions.html">Неисправности</a>
+    <a href="contacts.html">Контакты</a>
+</div>
+
+<div style="display: flex; justify-content: center;">
+    <table style="border-collapse: collapse; width: 100%;">
+      <thead style="background-color: #f2f2f2;">
+        <tr>
+          <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Функция</th>
+          <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Описание</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">I2C_Write()</td>
+          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Записывает данные в буфер</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">I2C_Read()</td>
+          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Читает данные с буфера</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">I2C_SetCallbackTX()</td>
+          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Устанавливает функцию обратного вызова на отправку данных</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">I2C_SetCallbackRX()</td>
+          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Устанавливает функцию обратного вызова на принятие данных</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">I2C_SetBaudrate()</td>
+          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Меняет скорость отправки данных (от 1000 до 400000 бит/сек)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<div class="footer">
+    <p>&copy; Отдел тестирования 2024</p>
+</div>
+
+</body>
+</html>

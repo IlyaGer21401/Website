@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <style>
+        .logo-img {
+            width: 40%; /* Примерная ширина, можно настроить под свои нужды */
+            height: auto;
+            margin-top: 10px;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            background: #edf2f7;
+        }
+
+        .header, .footer {
+            background: #00a7b5;
+            color: #fff;
+        }
+
+        .header h1, .footer p {
+            margin: 0;
+        }
+
+        .header {
+            padding: 16px 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: #00a7b5;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav a {
+            text-decoration: none;
+            padding: 10px 15px;
+            color: #ebf4ff;
+            border: 1px solid transparent;
+        }
+
+        .nav a:not(:last-child) {
+            border-right: 1px solid #007aff;
+        }
+
+        .nav a:hover {
+            background-color: #008692;
+            color: #fff;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .footer {
+            padding: 10px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div align="center" class="header">
+    <h1>Тестируемые функции</h1>
+</div>
+
+<div class="nav">
+    <a href="description.html">Описание тестов</a>
+    <a href="tested-functions.html">Тестируемые функции</a>
+    <a href="testing-functions.html">Описание работы тестов</a>
+    <a href="required-modules.html">Требуемые модули</a>
+    <a href="maintenance.html">Регламентные работы</a>
+    <a href="issues-and-solutions.html">Неисправности</a>
+    <a href="contacts.html">Контакты</a>
+</div>
+
+<div class="content">
+    <h2>I2C_Write_Test()</h2>
+    <p><img src="img/Write_test.png" alt="Логотип"></p>
+    <p1>Отправляет данные c устройства (Master) на устройство (Slave). Сравнивает отправленные и пришедшие данные. После сравнения отправляет результат обратно (к Master).</p1>
+    <h2>I2C_Read_Test()</h2>
+    <p><img src="img/Read_test.png" alt="Логотип"></p>
+    <p1>Отправляет с устройства (Slave) на устройство (Master) тестовые данные и сравнивает их с ожидаемыми даннми.</p1>
+    <h2>I2C_SetCallbackTX_Test()</h2>
+    <p1>Отправляет данные c устройства (Master) на устройство (Slave). Как только устройство закончит передачу данных, вызовится функция обратного вызова. Если она взвалась, то тест пройден.</p1>
+    <h2>I2C_SetCallbackRX_Test()</h2>
+    <p1>Отправляет данные c устройства (Slave) на устройство (Master). Как только устройство закончит передачу данных, вызовится функция обратного вызова. Если она взвалась, то тест пройден.</p1>
+    <h2>I2C_SetBaudrate_Test() </h2>
+    <p><img src="img/SetBaudrate_test.png" alt="Логотип"></p>
+    <p1>Отправляет данные c устройства (Master) на устройство (Slave), при этом замерив время начала и конца передачи данных и также отправляет их. После вычисляется скорость обмена данными. Дальше меняется скороть с помощью функции I2C_SetBaudrate(), после чего действия повторяются. Если скорость равна с ожидаемой, то тест пройден.</p1>
+</div>
+
+<div class="footer">
+    <p>&copy; Отдел тестирования 2024</p>
+</div>
+
+</body>
+</html>
